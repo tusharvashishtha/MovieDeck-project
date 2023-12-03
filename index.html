@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="./script.js" defer></script>
+</head>
+<body>
+    <header class="header">
+        <h1 class="h1Header">Movie Deck</h1>
+    </header>
+    <section class="movieSearchSection">
+        <form class="movie-search-bar">
+            <input type="text" placeholder="Search by Name">
+            <button>search</button>
+        </form>
+        <div>
+            <button class="btn sortByDate">Sort by date (oldest to newest)</button>
+            <button class="btn sortByRating">Sort by rating (least to most)</button>
+        </div>
+    </section>
+    <section class="movieDisplaySection container">
+        <div class="movieCustomizationBar">
+            <button>All</button>
+            <button>Favourite</button>
+        </div>
+        <section class="moviesListing">
+            <div class="movie-card">
+                <img src="" alt="">
+                <div>
+                    <div class="movie-details">
+                        <h5>movie title</h5>
+                        <div>
+                            <span>Votes: votes-count</span>
+                            <span>Ratin: vote-average</span>
+                        </div>
+                    </div>
+                    <span>icon</span>
+                </div>
+            </div>
+        </section>
+        <div class="pagination-bar">
+            <button class="btn prevbtn">Previous</button>
+            <button>Current Page</button>
+            <button class="btn nextbtn">Next</button>
+        </div>
+    </section>
+</body>
+</html>
