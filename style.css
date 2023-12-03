@@ -1,15 +1,91 @@
 *{
-    box-sizing: border-box;
-}
-body{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
+html, body{
+    height: 100%;
+    width: 100%;
+    /* background-color: #e9f5db; */
+    background-color: #bbe9db;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
 
-/* :root{
-    --primary-btn: 
-} */
+.header{
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+    margin-bottom: 20px;
+}
+
+#input{
+    height: 40px;
+    width: 30vw;
+    padding: 10px; 
+   font-size: 16px; 
+   border: 1px solid #ccc;
+   border-radius: 15px; 
+   background-color: #e0ffcd;
+}
+
+.btn{
+    background: #5E5DF0;
+    border-radius: 999px;
+    box-shadow: #5E5DF0 0 10px 20px -10px;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    cursor: pointer;
+    font-family: Inter,Helvetica,"Apple Color Emoji","Segoe UI Emoji",NotoColorEmoji,"Noto Color Emoji","Segoe UI Symbol","Android Emoji",EmojiSymbols,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue","Noto Sans",sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+    opacity: 1;
+    outline: 0 solid transparent;
+    padding: 8px 18px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    width: fit-content;
+    word-break: break-word;
+    border: 0;
+}
+
+/* .button-34 {
+    background: #5E5DF0;
+    border-radius: 999px;
+    box-shadow: #5E5DF0 0 10px 20px -10px;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    cursor: pointer;
+    font-family: Inter,Helvetica,"Apple Color Emoji","Segoe UI Emoji",NotoColorEmoji,"Noto Color Emoji","Segoe UI Symbol","Android Emoji",EmojiSymbols,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue","Noto Sans",sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+    opacity: 1;
+    outline: 0 solid transparent;
+    padding: 8px 18px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    width: fit-content;
+    word-break: break-word;
+    border: 0;
+  } */
+
+.sortByDate{
+    height: 50px;
+    width: 150px;
+    cursor: pointer;
+    margin-right: 20px;
+
+}
+.sortByRating{
+    height: 50px;
+    width: 150px;
+    cursor: pointer;
+}
 
 
 .movieSearchSection{
@@ -17,6 +93,7 @@ body{
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    flex-wrap: wrap;
 }
 
 .movieSearchSection > *{ 
@@ -27,7 +104,9 @@ body{
     display: flex;
     flex-direction: column;
     border: 1px solid black;
-    width: 18%;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    width: 200px;
+    height: 400px;
 }
 
 .movie-card > img{
@@ -42,8 +121,8 @@ body{
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    row-gap: 0.5rem;
-    column-gap: 0.5rem;
+    row-gap: 1rem;
+    column-gap: 0.8rem;
 }
 
 .pagination-bar{
@@ -53,4 +132,78 @@ body{
 
 .container{
     margin: 0 2rem;
+}
+
+.movieCustomizationBar{
+    width: 100vw;
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: flex-start;
+    margin-left: 90px;
+}
+
+.allBtn{
+    margin: 10px;
+    /* background-color: #b08968; */
+    background-color: #79c2d0;
+}
+.favBtn{
+    margin: 10px;
+}
+
+
+.movie-details {
+    height: 100%;
+    width: 100%;
+    background-color: #e3e3e3;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+    transition: background-color 0.3s ease;
+}
+
+.prevbtn{
+    height: 50px;
+    width: 150px;
+    cursor: pointer;
+    margin: 20px;
+}
+.nextbtn{
+    height: 50px;
+    width: 150px;
+    cursor: pointer;
+    margin: 20px;
+}
+
+@media (max-width: 688px) {
+    .movie-card{
+        display: flex;
+        flex-direction: column;
+        border: 1px solid black;
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+        width: 100px;
+        height: 200px;
+        font-size: 8px;
+        overflow: hidden;
+    }
+
+    .movie-card > img{
+        height: 150px;
+        width: 100%;
+    }
+}
+
+@media (max-width: 688px) {
+    .movie-card{
+        display: flex;
+        flex-direction: column;
+        border: 1px solid black;
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+        width: 80px;
+        height: 150px;
+        font-size: 8px;
+        overflow: hidden;
+    }
 }
